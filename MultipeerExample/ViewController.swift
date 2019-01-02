@@ -15,6 +15,7 @@ class ViewController: UIViewController {
 	
 	@objc func reload( ){
 		self.devices = Array(MPCManager.instance.devices).sorted(by: { $0.name < $1.name })
+
 		DispatchQueue.main.async {
 			self.tableView.reloadData()
 		}

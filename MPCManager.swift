@@ -23,8 +23,7 @@ class MPCManager: NSObject {
 	let serviceType = "MPC-Testing"
 	
 	var devices: [Device] = []
-	
-	
+
 	override init() {
 		if let data = UserDefaults.standard.data(forKey: "peerID"), let id = NSKeyedUnarchiver.unarchiveObject(with: data) as? MCPeerID {
 			self.localPeerID = id

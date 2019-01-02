@@ -59,7 +59,7 @@ class MPCManager: NSObject {
 		self.advertiser.startAdvertisingPeer()
 		self.browser.startBrowsingForPeers()
 		
-		NotificationCenter.default.addObserver(self, selector: #selector(enteredBackground), name: Notification.Name.UIApplicationDidEnterBackground, object: nil)
+		NotificationCenter.default.addObserver(self, selector: #selector(enteredBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
 	}
 	
 	@objc func enteredBackground() {
